@@ -3,258 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RED ALERT LIVE: What is Digital Arrest Scam & How to Verify Fake CBI Calls</title>
-    <meta name="description" content="URGENT: Is someone threatening you with 'Digital Arrest' over WhatsApp? Learn how to spot fake CBI and Police calls. Stay safe from India's biggest cyber scam.">
-    
-    <!-- Open Graph (for social media sharing) -->
-    <meta property="og:title" content="URGENT: Inside the Digital Arrest Scam Terrorizing India">
-    <meta property="og:description" content="Do NOT pay! Police will never video call you for arrest. Learn how to verify fake CBI/TRAI calls immediately.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://redalertlive.in/">
+    <title>Red Alert Live | India's #1 Scam & Cyber Threat Tracker</title>
+    <meta name="description" content="Real-time alerts on digital scams, UPI frauds, and tourist traps globally and in India.">
     
     <style>
-        /* CSS RESET & VARIABLES */
+        /* CORE VARIABLES */
         :root {
-            --bg-color: #050505; /* Near pure black */
-            --text-color: #e0e0e0; /* Off-white for readability */
-            --alert-red: #ff1111; /* Extremely bright, emergency red */
-            --accent-red: #aa0000; /* Darker red for borders */
-            --safe-green: #00ff00;
-            --box-bg: #111111; /* Slight lift from background */
-            --font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            --bg-dark: #050505;
+            --bg-card: #111111;
+            --text-light: #f4f4f4;
+            --text-dim: #aaaaaa;
+            --alert-red: #ff1111;
+            --dark-red: #880000;
+            --border-color: #222222;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', 'Helvetica Neue', sans-serif; }
 
-        /* BODY & LAYOUT */
-        body {
-            font-family: var(--font-stack);
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.7;
-            padding: 0;
-        }
+        body { background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* HEADER & NAVIGATION */
+        /* NAVIGATION & SVG LOGO */
         header {
             background-color: #000;
-            border-bottom: 3px solid var(--alert-red);
-            padding: 15px 0;
+            border-bottom: 2px solid var(--dark-red);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 100;
         }
 
-        .logo-area {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .logo-container {
+            height: 40px;
+            width: 300px;
         }
 
-        .live-dot {
-            height: 12px;
-            width: 12px;
+        nav a { color: var(--text-light); text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; transition: color 0.3s; }
+        nav a:hover { color: var(--alert-red); }
+
+        /* HERO SECTION */
+        .hero {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px;
+            background: linear-gradient(135deg, #1a0000 0%, var(--bg-dark) 100%);
+            border: 1px solid var(--alert-red);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 15px; font-weight: 900; letter-spacing: -1px; }
+        .hero p { font-size: 1.2rem; color: var(--text-dim); margin-bottom: 30px; max-width: 700px; margin-inline: auto; }
+        
+        .btn-main {
             background-color: var(--alert-red);
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 10px;
-            animation: pulse 1.5s infinite;
-        }
-
-        .brand-name {
             color: #fff;
-            text-transform: uppercase;
-            font-size: 1.5rem;
-            font-weight: 900;
-            letter-spacing: 2px;
-        }
-        .brand-name span { color: var(--alert-red); }
-
-        /* PULSE ANIMATION */
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(255, 17, 17, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(255, 17, 17, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 17, 17, 0); }
-        }
-
-        /* MAIN ARTICLE CONTENT */
-        main { padding: 40px 0; }
-
-        .article-header { margin-bottom: 40px; text-align: center; }
-
-        .kicker {
-            color: var(--alert-red);
-            text-transform: uppercase;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
             font-weight: bold;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            transition: background 0.3s, transform 0.2s;
+            display: inline-block;
+        }
+        .btn-main:hover { background-color: #cc0000; transform: translateY(-2px); }
+
+        /* CONTENT GRID */
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .section-title { font-size: 1.8rem; border-left: 5px solid var(--alert-red); padding-left: 15px; margin: 40px 0 20px; text-transform: uppercase; }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .news-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.3s, border-color 0.3s;
+            text-decoration: none;
             display: block;
         }
 
-        h1 {
-            color: #fff;
-            font-size: 2.8rem;
-            line-height: 1.2;
-            font-weight: 800;
-            margin-bottom: 15px;
+        .news-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--alert-red);
         }
 
-        .meta-info { color: #888; font-size: 0.9rem; }
-
-        /* TYPOGRAPHY */
-        h2 { color: #fff; border-left: 5px solid var(--alert-red); padding-left: 15px; margin: 50px 0 20px 0; font-size: 1.8rem; }
-        p { margin-bottom: 20px; font-size: 1.15rem; color: #ccc; }
-        strong { color: #fff; font-weight: 700; }
-        .highlight { color: var(--alert-red); font-weight: bold; }
-
-        /* CALLOUT BOXES */
-        .scam-box {
-            background-color: var(--box-bg);
-            border: 1px solid var(--accent-red);
-            padding: 30px;
-            border-radius: 8px;
-            margin: 40px 0;
-            position: relative;
-        }
-        .scam-box::before {
-            content: '⚠️ WARNING';
-            position: absolute;
-            top: -12px;
-            left: 20px;
-            background-color: var(--alert-red);
-            color: white;
-            padding: 2px 10px;
+        .card-tag {
+            background-color: #222;
+            color: var(--alert-red);
+            font-size: 0.75rem;
             font-weight: bold;
-            font-size: 0.8rem;
+            padding: 4px 8px;
             border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            display: inline-block;
         }
 
-        .verify-box {
-            background-color: #0a110a; /* Dark green hint */
-            border: 2px solid var(--safe-green);
-            padding: 30px;
-            border-radius: 8px;
-            margin: 40px 0;
-        }
-        .verify-box h3 { color: var(--safe-green); margin-bottom: 15px; font-size: 1.4rem; }
-        
-        .check-list { list-style: none; }
-        .check-list li { margin-bottom: 15px; position: relative; padding-left: 30px; color: #fff; font-size: 1.1rem; }
-        .check-list li::before {
-            content: '✓';
-            color: var(--safe-green);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        /* CTAs & TOOLS */
-        .api-tool-placeholder {
-            background-color: #111;
-            border: 2px dashed #444;
-            color: #888;
-            padding: 40px;
-            text-align: center;
-            border-radius: 8px;
-            margin: 50px 0;
-            cursor: not-allowed;
-        }
+        .news-card h3 { color: #fff; font-size: 1.3rem; margin-bottom: 10px; line-height: 1.4; }
+        .news-card p { color: var(--text-dim); font-size: 0.95rem; }
 
         /* FOOTER */
-        footer {
-            background-color: #000;
-            padding: 30px 0;
-            margin-top: 60px;
-            border-top: 1px solid #222;
-            text-align: center;
-            color: #666;
-            font-size: 0.9rem;
-        }
+        footer { background-color: #000; padding: 40px 20px; text-align: center; margin-top: 60px; border-top: 1px solid var(--border-color); color: var(--text-dim); }
 
-        /* MOBILE RESPONSIVENESS */
-        @media (max-width: 600px) {
-            h1 { font-size: 2.1rem; }
-            h2 { font-size: 1.5rem; }
-            p { font-size: 1.1rem; }
-            .container { padding: 15px; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            nav { display: none; /* Hide standard nav on mobile for now */ }
         }
     </style>
 </head>
 <body>
 
+    <!-- HEADER WITH BUILT-IN SVG LOGO -->
     <header>
-        <div class="container logo-area">
-            <span class="live-dot"></span>
-            <div class="brand-name">Red Alert <span>Live</span></div>
+        <div class="logo-container">
+            <!-- This SVG is your official Logo -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="100%" height="100%">
+                <!-- Animated Radar Dot -->
+                <circle cx="30" cy="50" r="12" fill="#ff1111">
+                    <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
+                </circle>
+                <!-- Radar Waves -->
+                <path d="M30 25 A25 25 0 0 1 55 50" fill="none" stroke="#ff1111" stroke-width="4" stroke-linecap="round"/>
+                <path d="M30 10 A40 40 0 0 1 70 50" fill="none" stroke="#880000" stroke-width="3" stroke-linecap="round"/>
+                <!-- Logo Text -->
+                <text x="85" y="65" font-family="Arial, sans-serif" font-size="42" font-weight="900" fill="#ffffff" letter-spacing="2">RED ALERT</text>
+                <text x="330" y="65" font-family="Arial, sans-serif" font-size="42" font-weight="300" fill="#ff1111" letter-spacing="2">LIVE</text>
+            </svg>
         </div>
+        <nav>
+            <a href="#india">National</a>
+            <a href="#global">Global</a>
+            <a href="#tourist">Tourist Scams</a>
+        </nav>
     </header>
 
+    <!-- TOP BREAKING NEWS HERO -->
+    <section class="hero">
+        <div class="card-tag" style="background-color: var(--alert-red); color: white;">BREAKING UPDATE TODAY</div>
+        <h1>Inside the "Digital Arrest" Scam Terrorizing India</h1>
+        <p>Millions are being targeted by fake CBI officers on WhatsApp video calls. Learn how to verify the calls instantly and protect your life savings.</p>
+        <!-- Link this button to the article page you created previously -->
+        <a href="digital-arrest.html" class="btn-main">Read the Full Alert</a>
+    </section>
+
     <div class="container">
-        <main>
-            <article>
-                <div class="article-header">
-                    <span class="kicker">NATIONAL THREAT ALERT</span>
-                    <h1>URGENT: Inside the "Digital Arrest" Scam Terrorizing India – Do Not Pay!</h1>
-                    <div class="meta-info">Updated: May 6, 2026 | Reported by Red Alert Intelligence Team</div>
-                </div>
+        
+        <!-- NATIONAL THREATS GRID -->
+        <h2 class="section-title" id="india">🚨 High Alert: India</h2>
+        <div class="news-grid">
+            <a href="#" class="news-card">
+                <span class="card-tag">Delhi Bust</span>
+                <h3>The 'Digital Marketing Task' WhatsApp Scam Busted in Delhi</h3>
+                <p>Five arrested today for luring victims into fake online rating tasks and draining bank accounts.</p>
+            </a>
+            <a href="#" class="news-card">
+                <span class="card-tag">Bank Fraud</span>
+                <h3>Do Not Click This "HDFC Pan Card Update" Link</h3>
+                <p>A new SMS wave is targeting HDFC users, leading to a fake portal that steals NetBanking credentials.</p>
+            </a>
+            <a href="#" class="news-card">
+                <span class="card-tag">Identity Theft</span>
+                <h3>The "Free 5G SIM Upgrade" Mule Account Trap</h3>
+                <p>Why scammers are offering cash for your Aadhaar card to open illegal bank accounts.</p>
+            </a>
+        </div>
 
-                <p>Is a "CBI Officer" threatening you on a WhatsApp video call right now? Stop. Do not panic, and most importantly, <span class="highlight">do not transfer any money.</span> You are being targeted by the "Digital Arrest" scam, the most dangerous cyber fraud sweeping India in 2026.</p>
+        <!-- TOURIST SCAMS GRID -->
+        <h2 class="section-title" id="tourist">✈️ Tourist Warnings</h2>
+        <div class="news-grid">
+            <a href="#" class="news-card">
+                <span class="card-tag">Bangkok / Global</span>
+                <h3>The "Your Hotel is Closed" Taxi Scam Striking Tourists</h3>
+                <p>Taxi drivers at major airports are lying to tourists to divert them to overpriced partner hotels.</p>
+            </a>
+            <a href="#" class="news-card">
+                <span class="card-tag">Karnataka, India</span>
+                <h3>Fake Tour Guides Exposed at Historical Monuments</h3>
+                <p>How unauthorized locals are forcing tourists into paying for fake history tours and overpriced souvenirs.</p>
+            </a>
+        </div>
 
-                <p>Millions of people across India are terrified and searching for answers as sophisticated criminal gangs impersonate law enforcement agencies (CBI, ED, Police, or even TRAI) to extort life savings. This is not a real arrest; it is a psychological trap.</p>
+        <!-- GLOBAL THREATS GRID -->
+        <h2 class="section-title" id="global">🌍 Global Cyber Intel</h2>
+        <div class="news-grid">
+            <a href="#" class="news-card">
+                <span class="card-tag">Interpol Intel</span>
+                <h3>$701 Million Crypto Scam Ring Busted Globally Today</h3>
+                <p>A massive international sting shuts down 9 crypto scam centers targeting worldwide investors.</p>
+            </a>
+            <a href="#" class="news-card">
+                <span class="card-tag">AI Threat</span>
+                <h3>Regulators Panic Over New 'Mythos' AI Tool</h3>
+                <p>Global financial watchdogs issue severe warnings regarding a new AI capable of market manipulation.</p>
+            </a>
+        </div>
 
-                <h2>How the "Digital Arrest" Scam Works</h2>
-                <p>The scam usually begins with an automated call or SMS claiming your phone number, Aadhaar card, or bank account has been linked to illegal activities, such as money laundering or drug trafficking.</p>
-                
-                <p>When you show fear, you are quickly transferred to a <span class="highlight">WhatsApp or Skype Video Call</span>. On the other end, scammers sit in fake police station setups, complete with uniforms, badges, and official-looking paperwork to appear authentic.</p>
-                
-                <div class="scam-box">
-                    <p><strong>Their Goal:</strong> To keep you on the video call for hours—sometimes days—claiming you are under "Digital Arrest." They forbid you from talking to family or disconnecting. They pressure you to transfer large sums of money into "safe government accounts" for verification, promising it will be refunded. <strong>It never is.</strong></p>
-                </div>
-
-                <h2>How to Verify a Fake CBI or Police Call Immediately</h2>
-                <p>If you are targeted, your knowledge is your only defense. Law enforcement agencies do not operate over video calls. Here is how you can verify and defeat the scam instantly:</p>
-
-                <div class="verify-box">
-                    <h3>✅ Official Verification Checklist</h3>
-                    <ul class="check-list">
-                        <li><strong>Rule #1: No Video Arrests.</strong> Real CBI, Police, or ED officers <span class="highlight">never</span> conduct investigation or make arrests over WhatsApp, Skype, or any video call. An arrest requires a physical warrant and physical presence.</li>
-                        <li><strong>Rule #2: No Money Demands.</strong> Government agencies will <strong>never</strong> ask you to transfer money to a private bank account for "verification." Any demand for money over a call is a scam.</li>
-                        <li><strong>Rule #3: Demand a Written Notice.</strong> A real investigation requires written notices under Section 41A of the CrPC. If they cannot produce a physical notice sent via official channels, it is a fraud.</li>
-                        <li><strong>Rule #4: Verify the Caller ID.</strong> Ignore "Truecaller" names, which can be faked. If they claim to be from a specific police station, disconnect and call that station’s official landline number found on the <span class="safe-green">official government (.gov.in) website</span>.</li>
-                    </ul>
-                </div>
-
-                <h2>What to do if Targeted</h2>
-                <p>If you receive such a call, <span class="highlight">disconnect immediately.</span> Block the number. Do not engage in argument.</p>
-                
-                <p>If you have already transferred money, time is critical. Immediately call India's official National Cyber Crime Helpline at <strong style="color: #fff;">1930</strong> to report the fraud and attempt to freeze the transaction. File a complaint at <strong>cybercrime.gov.in</strong>.</p>
-
-                <p>Stay vigilant. Share this alert to protect your family and friends. </p>
-
-                <!-- ADVANCED FEATURE PLACEHOLDER -->
-                <h2>Instant Scam Checker (Tool Loading)</h2>
-                <p>We are currently integrating a real-time AI checker. Soon, you will be able to paste suspicious messages or enter caller numbers here to instantly check them against our fraud database.</p>
-                <div class="api-tool-placeholder">
-                    [ AI Scam Check Tool Interface – Integration Pending ]
-                </div>
-
-            </article>
-        </main>
     </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Red Alert Live. Global and National Scam Intelligence. All rights reserved.</p>
-            <p style="font-size: 0.8rem; margin-top: 10px;">Disclaimer: This site provides intelligence and alerts based on available data. Always consult official law enforcement channels for legal emergencies.</p>
+        <div class="logo-container" style="margin: 0 auto 20px auto;">
+            <!-- Footer Logo Duplicate -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="100%" height="100%">
+                <text x="85" y="65" font-family="Arial, sans-serif" font-size="42" font-weight="900" fill="#ffffff" letter-spacing="2">RED ALERT</text>
+                <text x="330" y="65" font-family="Arial, sans-serif" font-size="42" font-weight="300" fill="#ff1111" letter-spacing="2">LIVE</text>
+            </svg>
         </div>
+        <p>Your first line of defense against digital fraud.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">&copy; 2026 Red Alert Live. Built to protect.</p>
     </footer>
 
 </body>
