@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Red Alert Live | India's #1 Scam & Cyber Threat Tracker</title>
-    <meta name="description" content="Real-time alerts on digital scams, UPI frauds, and tourist traps globally and in India.">
+    <meta name="description" content="Real-time alerts on digital scams, UPI frauds, tourist traps, and extreme weather globally and in India.">
     
     <style>
         /* CORE VARIABLES */
@@ -38,12 +38,13 @@
         .logo-container {
             height: 40px;
             width: 300px;
+            cursor: pointer;
         }
 
         nav a { color: var(--text-light); text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; transition: color 0.3s; }
         nav a:hover { color: var(--alert-red); }
 
-        /* HERO SECTION */
+        /* HERO SECTION WITH ALERT ANIMATIONS */
         .hero {
             max-width: 1200px;
             margin: 40px auto;
@@ -77,20 +78,15 @@
         }
 
         @keyframes emergency-pulse {
-            0% {
-                box-shadow: 0 0 10px rgba(255, 17, 17, 0.1), inset 0 0 10px rgba(255, 17, 17, 0.05);
-                border-color: #660000;
-            }
-            100% {
-                box-shadow: 0 0 30px rgba(255, 17, 17, 0.4), inset 0 0 40px rgba(255, 17, 17, 0.2);
-                border-color: var(--alert-red);
-            }
+            0% { box-shadow: 0 0 10px rgba(255, 17, 17, 0.1), inset 0 0 10px rgba(255, 17, 17, 0.05); border-color: #660000; }
+            100% { box-shadow: 0 0 30px rgba(255, 17, 17, 0.4), inset 0 0 40px rgba(255, 17, 17, 0.2); border-color: var(--alert-red); }
         }
 
         @keyframes radar-sweep {
             0% { left: -150%; }
             100% { left: 150%; }
         }
+
         .hero h1 { font-size: 3rem; margin-bottom: 15px; font-weight: 900; letter-spacing: -1px; }
         .hero p { font-size: 1.2rem; color: var(--text-dim); margin-bottom: 30px; max-width: 700px; margin-inline: auto; }
         
@@ -154,62 +150,50 @@
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
-            nav { display: none; /* Hide standard nav on mobile for now */ }
+            nav { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER WITH BUILT-IN SVG LOGO -->
     <header>
-        <div class="logo-container">
-            <!-- This SVG is your official Logo -->
-           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100%">
-    <circle cx="30" cy="50" r="12" fill="#ff1111">
-        <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
-    </circle>
-    <path d="M30 25 A25 25 0 0 1 55 50" fill="none" stroke="#ff1111" stroke-width="4" stroke-linecap="round"/>
-    <path d="M30 10 A40 40 0 0 1 70 50" fill="none" stroke="#880000" stroke-width="3" stroke-linecap="round"/>
-    <text x="85" y="65" font-family="Arial, sans-serif" font-size="42" font-weight="900" fill="#ffffff" letter-spacing="2">
-        RED ALERT <tspan font-weight="300" fill="#ff1111">LIVE</tspan>
-    </text>
-</svg>
+        <div class="logo-container" onclick="window.location.href='index.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100%">
+                <circle cx="30" cy="50" r="12" fill="#ff1111">
+                    <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
+                </circle>
+                <path d="M30 25 A25 25 0 0 1 55 50" fill="none" stroke="#ff1111" stroke-width="4" stroke-linecap="round"/>
+                <path d="M30 10 A40 40 0 0 1 70 50" fill="none" stroke="#880000" stroke-width="3" stroke-linecap="round"/>
+                <text x="85" y="65" font-family="Arial, sans-serif" font-size="42" font-weight="900" fill="#ffffff" letter-spacing="2">
+                    RED ALERT <tspan font-weight="300" fill="#ff1111">LIVE</tspan>
+                </text>
+            </svg>
         </div>
-        <h2 class="section-title" id="weather">🌪️ Extreme Weather Alerts</h2>
-        <div class="news-grid">
-            <a href="cyclone-alert.html" class="news-card">
-                <span class="card-tag" style="background-color: #ff9900; color: #000;">IMD WARNING</span>
-                <h3>Severe Cyclone Forming in Bay of Bengal</h3>
-                <p>IMD issues early warnings for the East Coast. Expected landfall within 72 hours. Check your zone.</p>
-            </a>
-            <a href="#" class="news-card">
-                <span class="card-tag" style="background-color: var(--alert-red); color: white;">RED ALERT: HEATWAVE</span>
-                <h3>48°C Heatwave: Power Grid Stress Warning</h3>
-                <p>Severe heatwave triggers red alerts across Delhi, UP, and Rajasthan. Medical advisories issued.</p>
-            </a>
-        </div>
+        <nav>
+            <a href="#india">National</a>
+            <a href="#global">Global</a>
+            <a href="#tourist">Tourist Scams</a>
+            <a href="#weather">Weather</a>
+        </nav>
     </header>
 
-    <!-- TOP BREAKING NEWS HERO -->
     <section class="hero">
         <div class="card-tag" style="background-color: var(--alert-red); color: white;">BREAKING UPDATE TODAY</div>
         <h1>Inside the "Digital Arrest" Scam Terrorizing India</h1>
         <p>Millions are being targeted by fake CBI officers on WhatsApp video calls. Learn how to verify the calls instantly and protect your life savings.</p>
-        <!-- Link this button to the article page you created previously -->
         <a href="digital-arrest.html" class="btn-main">Read the Full Alert</a>
     </section>
 
     <div class="container">
         
-        <!-- NATIONAL THREATS GRID -->
         <h2 class="section-title" id="india">🚨 High Alert: India</h2>
         <div class="news-grid">
-            <a href="whatsapp-task-scam.html"class="news-card">
+            <a href="whatsapp-task-scam.html" class="news-card">
                 <span class="card-tag">Delhi Bust</span>
                 <h3>The 'Digital Marketing Task' WhatsApp Scam Busted in Delhi</h3>
                 <p>Five arrested today for luring victims into fake online rating tasks and draining bank accounts.</p>
             </a>
-            <a href="hdfc-pan-scam.html"class="news-card">
+            <a href="hdfc-pan-scam.html" class="news-card">
                 <span class="card-tag">Bank Fraud</span>
                 <h3>Do Not Click This "HDFC Pan Card Update" Link</h3>
                 <p>A new SMS wave is targeting HDFC users, leading to a fake portal that steals NetBanking credentials.</p>
@@ -219,9 +203,8 @@
                 <h3>The "Free 5G SIM Upgrade" Mule Account Trap</h3>
                 <p>Why scammers are offering cash for your Aadhaar card to open illegal bank accounts.</p>
             </a>
-        </div>hotel-closed-scam.html
+        </div>
 
-        <!-- TOURIST SCAMS GRID -->
         <h2 class="section-title" id="tourist">✈️ Tourist Warnings</h2>
         <div class="news-grid">
             <a href="hotel-closed-scam.html" class="news-card">
@@ -236,7 +219,6 @@
             </a>
         </div>
 
-        <!-- GLOBAL THREATS GRID -->
         <h2 class="section-title" id="global">🌍 Global Cyber Intel</h2>
         <div class="news-grid">
             <a href="crypto-scam-bust.html" class="news-card">
@@ -251,17 +233,31 @@
             </a>
         </div>
 
+        <h2 class="section-title" id="weather">🌪️ Extreme Weather Alerts</h2>
+        <div class="news-grid">
+            <a href="cyclone-alert.html" class="news-card">
+                <span class="card-tag" style="background-color: #ff9900; color: #000;">IMD WARNING</span>
+                <h3>Severe Cyclone Forming in Bay of Bengal</h3>
+                <p>IMD issues early warnings for the East Coast. Expected landfall within 72 hours. Check your zone.</p>
+            </a>
+            <a href="#" class="news-card">
+                <span class="card-tag" style="background-color: var(--alert-red); color: white;">RED ALERT: HEATWAVE</span>
+                <h3>48°C Heatwave: Power Grid Stress Warning</h3>
+                <p>Severe heatwave triggers red alerts across Delhi, UP, and Rajasthan. Medical advisories issued.</p>
+            </a>
+        </div>
+
     </div>
 
     <footer>
-        <div class="logo-container" style="margin: 0 auto 20px auto;">
-            <!-- Footer Logo Duplicate -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="100%" height="100%">
-                <text x="85" y="65" font-family="Arial, sans-serif" font-size="42" font-weight="900" fill="#ffffff" letter-spacing="2">RED ALERT</text>
-                <text x="330" y="65" font-family="Arial, sans-serif" font-size="42" font-weight="300" fill="#ff1111" letter-spacing="2">LIVE</text>
+        <div class="logo-container" style="margin: 0 auto 20px auto; cursor: pointer;" onclick="window.location.href='index.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100%">
+                <text x="85" y="65" font-family="Arial, sans-serif" font-size="42" font-weight="900" fill="#ffffff" letter-spacing="2">
+                    RED ALERT <tspan font-weight="300" fill="#ff1111">LIVE</tspan>
+                </text>
             </svg>
         </div>
-        <p>Your first line of defense against digital fraud.</p>
+        <p>Your first line of defense against digital fraud and physical threats.</p>
         <p style="font-size: 0.8rem; margin-top: 10px;">&copy; 2026 Red Alert Live. Built to protect.</p>
     </footer>
 
