@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RED ALERT: 48°C Heatwave & Power Grid Stress Warning | Red Alert Live</title>
+    <meta name="description" content="IMD issues a Red Alert for severe heatwaves across North India. Temperatures hit 48°C. Read the medical advisories and power grid warnings here.">
+    
+    <meta name="keywords" content="India heatwave 2026, Delhi 48 degree heatwave, power grid stress warning, heatstroke symptoms, IMD red alert heatwave, UP Rajasthan weather">
+    
+    <style>
+        /* CORE VARIABLES */
+        :root {
+            --bg-dark: #050505;
+            --bg-card: #111111;
+            --text-light: #f4f4f4;
+            --text-dim: #aaaaaa;
+            --alert-red: #ff1111;
+            --dark-red: #880000;
+            --border-color: #222222;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', 'Helvetica Neue', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-light); line-height: 1.8; }
+
+        /* HEADER */
+        header {
+            background-color: #000; border-bottom: 2px solid var(--dark-red);
+            padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .logo-container { height: 40px; width: 300px; cursor: pointer; }
+        nav a { color: var(--text-light); text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; transition: color 0.3s; }
+        nav a:hover { color: var(--alert-red); }
+
+        /* ARTICLE LAYOUT */
+        .article-container { max-width: 800px; margin: 40px auto; padding: 20px; }
+        .breadcrumb { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;}
+        .breadcrumb a { color: var(--alert-red); text-decoration: none; font-weight: bold; }
+        
+        .article-header h1 { font-size: 2.8rem; margin-bottom: 15px; font-weight: 900; line-height: 1.2; letter-spacing: -1px; }
+        .meta { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 40px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
+        .meta span { color: var(--alert-red); font-weight: bold; }
+
+        /* TYPOGRAPHY & CONTENT */
+        h2 { color: #fff; font-size: 1.8rem; margin: 40px 0 20px; border-left: 5px solid var(--alert-red); padding-left: 15px; }
+        p { margin-bottom: 20px; font-size: 1.1rem; color: #cccccc; }
+        ul { margin-bottom: 20px; color: #ccc; font-size: 1.1rem; padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        strong { color: #fff; }
+        .highlight { color: var(--alert-red); font-weight: bold; }
+
+        .heat-box {
+            background-color: rgba(255, 17, 17, 0.1);
+            border: 1px solid var(--alert-red);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            position: relative;
+        }
+        .heat-box::before {
+            content: 'MEDICAL ADVISORY';
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background-color: var(--alert-red);
+            color: #fff;
+            padding: 2px 10px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .heat-box h3 { color: var(--alert-red); margin-bottom: 10px; font-size: 1.3rem; text-transform: uppercase;}
+
+        .update-tag {
+            background-color: var(--alert-red);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* Q&A SECTION */
+        .qa-section { background-color: var(--bg-card); padding: 30px; border-radius: 8px; margin-top: 50px; border: 1px solid var(--border-color); }
+        .qa-item { margin-bottom: 25px; border-bottom: 1px solid #333; padding-bottom: 20px; }
+        .qa-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .question { font-size: 1.2rem; font-weight: bold; color: #fff; margin-bottom: 10px; display: flex; gap: 10px; }
+        .question::before { content: 'Q:'; color: var(--alert-red); }
+        .answer { font-size: 1.05rem; color: #bbb; display: flex; gap: 10px; }
+        .answer::before { content: 'A:'; color: #4CAF50; font-weight: bold; }
+
+        /* FOOTER */
+        footer { background-color: #000; padding: 40px 20px; text-align: center; margin-top: 60px; border-top: 1px solid var(--border-color); color: var(--text-dim); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container" onclick="window.location.href='index.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100%">
+                <circle cx="30" cy="50" r="12" fill="#ff1111"><animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/></circle>
+                <path d="M30 25 A25 25 0 0 1 55 50" fill="none" stroke="#ff1111" stroke-width="4" stroke-linecap="round"/>
+                <path d="M30 10 A40 40 0 0 1 70 50" fill="none" stroke="#880000" stroke-width="3" stroke-linecap="round"/>
+                <text x="85" y="65" font-family="Arial, sans-serif" font-size="42" font-weight="900" fill="#ffffff" letter-spacing="2">RED ALERT <tspan font-weight="300" fill="#ff1111">LIVE</tspan></text>
+            </svg>
+        </div>
+        <nav>
+            <a href="index.html">Back to Home</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <div class="breadcrumb"><a href="index.html">Home</a> &gt; Weather Alerts &gt; Heatwave</div>
+        
+        <div class="article-header">
+            <h1><span class="update-tag">RED ALERT</span> 48°C Heatwave: IMD Issues Red Alert, Power Grids Under Stress</h1>
+            <div class="meta">Published: <span>May 7, 2026</span> | By <span>Red Alert Tracking Desk</span></div>
+        </div>
+
+        <p>A punishing heatwave is currently sweeping across North and Central India, with temperatures breaching the 48°C (118°F) mark in several districts of Rajasthan, Delhi NCR, and Uttar Pradesh. The India Meteorological Department (IMD) has escalated its warnings to a <strong>"Red Alert"</strong> for multiple states, advising extreme caution.</p>
+
+        <h2>The Power Grid Crisis</h2>
+        <p>The unprecedented heat has triggered a massive surge in electricity demand as millions of air conditioners and coolers run simultaneously. The National Load Despatch Centre (NLDC) has issued warnings of severe stress on the regional power grids.</p>
+        
+        <p>Residents in urban centers are being warned to prepare for <strong>rolling blackouts and localized transformer failures</strong>. Authorities are urging citizens to run air conditioners at 26°C to conserve energy and prevent total grid collapse during peak afternoon hours.</p>
+
+        <div class="heat-box">
+            <h3>Heatstroke vs. Heat Exhaustion</h3>
+            <p>Heatstroke is a life-threatening medical emergency. It occurs when your body's cooling system completely fails. <strong>Call an ambulance immediately if you notice:</strong></p>
+            <ul>
+                <li>Hot, dry skin with absolutely <strong>no sweating</strong>.</li>
+                <li>Confusion, slurred speech, or loss of consciousness.</li>
+                <li>A throbbing headache and rapid, strong pulse.</li>
+            </ul>
+            <p>While waiting for medical help, move the person to the shade, remove excess clothing, and cool them rapidly with cold water or ice packs placed on the neck, armpits, and groin.</p>
+        </div>
+
+        <h2>Survival Protocols: Next 48 Hours</h2>
+        <p>To survive this extreme weather anomaly, health officials recommend strict adherence to the following protocols:</p>
+        <ul>
+            <li><strong>The "Shadow Rule":</strong> Do not step outside between 11:00 AM and 4:00 PM. If your shadow is shorter than you, the sun is at its most dangerous peak.</li>
+            <li><strong>Hyper-Hydration:</strong> Drink water constantly, even if you do not feel thirsty. Incorporate ORS (Oral Rehydration Solution), coconut water, and lemon water to replenish lost electrolytes. Avoid caffeine and alcohol.</li>
+            <li><strong>Wet Towel Method:</strong> If the power goes out, soak a towel in cold water and drape it over your neck and shoulders to rapidly lower your core body temperature.</li>
+        </ul>
+
+        <div class="qa-section">
+            <h2 style="margin-top: 0; border-left: none; padding-left: 0; text-align: center;">Frequently Asked Questions (Q&A)</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Practical tips for surviving extreme temperatures.</p>
+
+            <div class="qa-item">
+                <div class="question">How can I keep my room cool during a power cut?</div>
+                <div class="answer">Keep all windows and curtains tightly closed during the day to block out solar radiation. Once the sun sets, open cross-ventilating windows. You can also hang damp bedsheets in front of open windows at night to create a makeshift evaporative cooler.</div>
+            </div>
+
+            <div class="qa-item">
+                <div class="question">Is it safe to drink chilled water immediately after coming from the heat?</div>
+                <div class="answer">Medical experts advise against drinking ice-cold water immediately upon returning from extreme heat, as it can cause sudden blood vessel constriction and sore throats. Drink cool or room-temperature water gradually instead.</div>
+            </div>
+
+            <div class="qa-item">
+                <div class="question">How do I protect outdoor pets and street animals?</div>
+                <div class="answer">Leave deep earthen bowls (which naturally keep water cool) filled with clean water outside your home or in shaded areas. Do not walk dogs on asphalt or concrete during the day—if the pavement is too hot for the back of your hand, it will burn their paws.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="logo-container" style="margin: 0 auto 20px auto; cursor: pointer;" onclick="window.location.href='index.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100%">
+                <text x="85" y="65" font-family="Arial, sans-serif" font-size="42" font-weight="900" fill="#ffffff" letter-spacing="2">RED ALERT <tspan font-weight="300" fill="#ff1111">LIVE</tspan></text>
+            </svg>
+        </div>
+        <p>Your first line of defense against extreme weather.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">&copy; 2026 Red Alert Live. Stay Safe.</p>
+    </footer>
+
+</body>
+</html>
