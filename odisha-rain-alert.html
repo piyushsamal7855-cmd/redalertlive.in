@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RED ALERT: Tomorrow Heavy Rain Warning for Odisha | Red Alert Live</title>
+    <meta name="description" content="IMD issues an urgent heavy rain and flash flood warning for Odisha tomorrow. Check affected districts, waterlogging alerts, and school closures.">
+    
+    <meta name="keywords" content="Odisha rain tomorrow, Bhubaneswar weather update, IMD heavy rain warning Odisha, Cuttack waterlogging, Puri weather alert, Odisha school closed news">
+    
+    <style>
+        /* CORE VARIABLES */
+        :root {
+            --bg-dark: #050505;
+            --bg-card: #111111;
+            --text-light: #f4f4f4;
+            --text-dim: #aaaaaa;
+            --alert-red: #ff1111;
+            --dark-red: #880000;
+            --border-color: #222222;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', 'Helvetica Neue', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-light); line-height: 1.8; }
+
+        /* HEADER */
+        header {
+            background-color: #000; border-bottom: 2px solid var(--dark-red);
+            padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .logo-container { height: 40px; width: 300px; cursor: pointer; }
+        nav a { color: var(--text-light); text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; transition: color 0.3s; }
+        nav a:hover { color: var(--alert-red); }
+
+        /* ARTICLE LAYOUT */
+        .article-container { max-width: 800px; margin: 40px auto; padding: 20px; }
+        .breadcrumb { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;}
+        .breadcrumb a { color: var(--alert-red); text-decoration: none; font-weight: bold; }
+        
+        .article-header h1 { font-size: 2.8rem; margin-bottom: 15px; font-weight: 900; line-height: 1.2; letter-spacing: -1px; }
+        .meta { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 40px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
+        .meta span { color: var(--alert-red); font-weight: bold; }
+
+        /* TYPOGRAPHY & CONTENT */
+        h2 { color: #fff; font-size: 1.8rem; margin: 40px 0 20px; border-left: 5px solid var(--alert-red); padding-left: 15px; }
+        p { margin-bottom: 20px; font-size: 1.1rem; color: #cccccc; }
+        ul { margin-bottom: 20px; color: #ccc; font-size: 1.1rem; padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        strong { color: #fff; }
+
+        .rain-box {
+            background-color: rgba(0, 102, 255, 0.1);
+            border: 1px solid #0066ff;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            position: relative;
+        }
+        .rain-box::before {
+            content: 'URGENT SAFETY ADVISORY';
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background-color: #0066ff;
+            color: #fff;
+            padding: 2px 10px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .rain-box h3 { color: #66a3ff; margin-bottom: 10px; font-size: 1.3rem; text-transform: uppercase;}
+
+        .update-tag {
+            background-color: #0066ff;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* Q&A SECTION */
+        .qa-section { background-color: var(--bg-card); padding: 30px; border-radius: 8px; margin-top: 50px; border: 1px solid var(--border-color); }
+        .qa-item { margin-bottom: 25px; border-bottom: 1px solid #333; padding-bottom: 20px; }
+        .qa-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .question { font-size: 1.2rem; font-weight: bold; color: #fff; margin-bottom: 10px; display: flex; gap: 10px; }
+        .question::before { content: 'Q:'; color: var(--alert-red); }
+        .answer { font-size: 1.05rem; color: #bbb; display: flex; gap: 10px; }
+        .answer::before { content: 'A:'; color: #4CAF50; font-weight: bold; }
+
+        /* FOOTER */
+        footer { background-color: #000; padding: 40px 20px; text-align: center; margin-top: 60px; border-top: 1px solid var(--border-color); color: var(--text-dim); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container" onclick="window.location.href='index.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100%">
+                <circle cx="30" cy="50" r="12" fill="#ff1111"><animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/></circle>
+                <path d="M30 25 A25 25 0 0 1 55 50" fill="none" stroke="#ff1111" stroke-width="4" stroke-linecap="round"/>
+                <path d="M30 10 A40 40 0 0 1 70 50" fill="none" stroke="#880000" stroke-width="3" stroke-linecap="round"/>
+                <text x="85" y="65" font-family="Arial, sans-serif" font-size="42" font-weight="900" fill="#ffffff" letter-spacing="2">RED ALERT <tspan font-weight="300" fill="#ff1111">LIVE</tspan></text>
+            </svg>
+        </div>
+        <nav>
+            <a href="index.html">Back to Home</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <div class="breadcrumb"><a href="index.html">Home</a> &gt; Weather Alerts &gt; Heavy Rain Warning</div>
+        
+        <div class="article-header">
+            <h1><span class="update-tag">ODISHA ALERT</span> Tomorrow: Heavy Rain & Flash Flood Warning Issued</h1>
+            <div class="meta">Published: <span>May 7, 2026</span> | By <span>Red Alert Tracking Desk</span></div>
+        </div>
+<img src="YOUR-IMAGE-NAME.jpg" alt="Odisha Heavy Rain and Flash Flood Map" style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 8px; border: 1px solid #333; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
+        <p>The Regional Meteorological Centre in Bhubaneswar has issued an urgent <strong>Orange Alert</strong> for tomorrow, forecasting extremely heavy rainfall and severe thunderstorms across multiple districts in Odisha. Residents are advised to stay indoors and avoid unnecessary travel.</p>
+
+        <h2>Districts on High Alert</h2>
+        <p>The intense weather system, driven by strong pre-monsoon cyclonic circulations over the Bay of Bengal, is expected to heavily batter the coastal and adjoining interior districts starting early tomorrow morning. The primary impact zones include:</p>
+        <ul>
+            <li><strong>Khordha (including Bhubaneswar)</strong></li>
+            <li><strong>Cuttack</strong></li>
+            <li><strong>Puri</strong></li>
+            <li><strong>Ganjam</strong></li>
+            <li><strong>Jagatsinghpur & Kendrapara</strong></li>
+        </ul>
+
+        <div class="rain-box">
+            <h3>Flash Floods and Urban Waterlogging</h3>
+            <p>Authorities have warned of severe waterlogging in low-lying areas of the twin cities (Bhubaneswar and Cuttack). Due to sudden downpours, flash floods in local nullahs and rivers are highly likely. <strong>Do not attempt to cross flooded roads or bridges on two-wheelers.</strong></p>
+        </div>
+
+        <h2>Electrocution Danger: Stay Away from Poles</h2>
+        <p>During heavy rains, snapped electrical wires and waterlogged streets create a lethal combination. The electricity board has urged all citizens to stay strictly away from open transformer boxes, street light poles, and fallen trees. If you see sparking or a fallen wire in a puddle, maintain a distance of at least 15 feet and call the local emergency helpline immediately.</p>
+
+        <div class="qa-section">
+            <h2 style="margin-top: 0; border-left: none; padding-left: 0; text-align: center;">Frequently Asked Questions (Q&A)</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Important information for tomorrow's weather event.</p>
+
+            <div class="qa-item">
+                <div class="question">Will schools and colleges in Odisha be closed tomorrow?</div>
+                <div class="answer">The District Collectors of Khordha, Cuttack, and Puri are monitoring the situation closely. An official announcement regarding school and Anganwadi closures is usually made by 8:00 PM tonight. Parents should keep an eye on official WhatsApp groups and local news channels.</div>
+            </div>
+
+            <div class="qa-item">
+                <div class="question">Will train and flight services be affected?</div>
+                <div class="answer">While major flights usually operate unless visibility drops critically, local passenger trains and inter-city bus services may experience significant delays due to waterlogging on tracks and highways. Always check the IRCTC app or your airline's flight status before leaving for the station or airport.</div>
+            </div>
+
+            <div class="qa-item">
+                <div class="question">What are the emergency helpline numbers for Odisha?</div>
+                <div class="answer">Keep these numbers saved on your phone: <strong>State Emergency Operation Centre (SEOC): 1070</strong>. District Emergency Operation Centre: 1077. Police: 112. Ambulance: 108.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="logo-container" style="margin: 0 auto 20px auto; cursor: pointer;" onclick="window.location.href='index.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 100" width="100%" height="100%">
+                <text x="85" y="65" font-family="Arial, sans-serif" font-size="42" font-weight="900" fill="#ffffff" letter-spacing="2">RED ALERT <tspan font-weight="300" fill="#ff1111">LIVE</tspan></text>
+            </svg>
+        </div>
+        <p>Your first line of defense against extreme weather events.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">&copy; 2026 Red Alert Live. Stay Safe.</p>
+    </footer>
+
+</body>
+</html>
