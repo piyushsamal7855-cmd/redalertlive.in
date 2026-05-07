@@ -104,6 +104,42 @@
         }
         .btn-main:hover { background-color: #cc0000; transform: translateY(-2px); }
 
+        /* SEARCH BAR */
+        .search-container {
+            max-width: 1200px;
+            margin: 0 auto 20px auto;
+            padding: 0 20px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 18px 25px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--alert-red);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1.1rem;
+            outline: none;
+            transition: box-shadow 0.3s;
+        }
+
+        .search-input:focus {
+            box-shadow: 0 0 15px rgba(255, 17, 17, 0.3);
+        }
+
+        .search-input::placeholder {
+            color: #777;
+        }
+        
+        .no-results {
+            display: none;
+            text-align: center;
+            color: var(--text-dim);
+            padding: 40px;
+            font-size: 1.2rem;
+            width: 100%;
+        }
+
         /* CONTENT GRID */
         .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
         .section-title { font-size: 1.8rem; border-left: 5px solid var(--alert-red); padding-left: 15px; margin: 40px 0 20px; text-transform: uppercase; }
@@ -185,6 +221,12 @@
     </section>
 
     <div class="container">
+
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search for scams, cyber threats, or weather alerts...">
+        </div>
+        
+        <div id="noResults" class="no-results">No alerts found for your search. Stay safe!</div>
         
         <h2 class="section-title" id="india">🚨 High Alert: India</h2>
         <div class="news-grid">
@@ -240,7 +282,7 @@
                 <h3>Severe Cyclone Forming in Bay of Bengal</h3>
                 <p>IMD issues early warnings for the East Coast. Expected landfall within 72 hours. Check your zone.</p>
             </a>
-            <a href="heatwave-alert.html"class="news-card">
+            <a href="heatwave-alert.html" class="news-card">
                 <span class="card-tag" style="background-color: var(--alert-red); color: white;">RED ALERT: HEATWAVE</span>
                 <h3>48°C Heatwave: Power Grid Stress Warning</h3>
                 <p>Severe heatwave triggers red alerts across Delhi, UP, and Rajasthan. Medical advisories issued.</p>
@@ -260,6 +302,30 @@
         <p>Your first line of defense against digital fraud and physical threats.</p>
         <p style="font-size: 0.8rem; margin-top: 10px;">&copy; 2026 Red Alert Live. Built to protect.</p>
     </footer>
+
+    <script>
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            let searchQuery = this.value.toLowerCase();
+            let cards = document.querySelectorAll('.news-card');
+            let hasVisibleCards = false;
+
+            cards.forEach(card => {
+                let title = card.querySelector('h3').textContent.toLowerCase();
+                let text = card.querySelector('p').textContent.toLowerCase();
+                let tag = card.querySelector('.card-tag').textContent.toLowerCase();
+
+                if (title.includes(searchQuery) || text.includes(searchQuery) || tag.includes(searchQuery)) {
+                    card.style.display = 'block';
+                    hasVisibleCards = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show or hide the "No Results" message
+            document.getElementById('noResults').style.display = hasVisibleCards || searchQuery === '' ? 'none' : 'block';
+        });
+    </script>
 
 </body>
 </html>
